@@ -1,0 +1,62 @@
+{
+  "project": "Mansur",
+  "purpose": "Fixed public demonstration assets; see README.md for provenance and licenses.",
+  "assets": [
+    {
+      "file": "mansur-poster.png",
+      "bytes": 1716264,
+      "sha256": "3710a892a9ebe674866daecfce2f90f4aef86be275948439a37071b8d80cd65a",
+      "width": 1024,
+      "height": 1536,
+      "source": "owner-approved AI-generated promotional illustration"
+    },
+    {
+      "file": "candidate.png",
+      "bytes": 6163,
+      "sha256": "4c0d9fa16599c14a413eafdf5876646df2683145dfc80261c5507c166bf4f57a",
+      "width": 550,
+      "height": 65,
+      "source": "production native offscreen render"
+    },
+    {
+      "file": "english-popup.png",
+      "bytes": 2343,
+      "sha256": "b9c837f45266f9529d7817fa60f0670547db0e0dab80620e090b02cf3b0dead3",
+      "width": 318,
+      "height": 59,
+      "source": "production desktop offscreen render"
+    },
+    {
+      "file": "word-learning.png",
+      "bytes": 9172,
+      "sha256": "590c8bc0e98c51d3429198ca107d826e8ac516a60f13bb17e45c33763db56c9d",
+      "width": 460,
+      "height": 217,
+      "source": "production desktop offscreen render with fixed reference text"
+    },
+    {
+      "file": "settings-appearance.png",
+      "bytes": 50233,
+      "sha256": "8206ca13a557efd87c7d3c80822a1f7d35aa02f6c41f4620b889ed0a58e04e3a",
+      "width": 976,
+      "height": 783,
+      "source": "production desktop offscreen render"
+    },
+    {
+      "file": "models-translation.png",
+      "bytes": 70104,
+      "sha256": "0c14ca3381f842e9182410e569622a9b35e1210ae0826d99d135e5d4bf48c5d7",
+      "width": 976,
+      "height": 783,
+      "source": "production settings on an owned private Windows desktop"
+    },
+    {
+      "file": "models-speech.png",
+      "bytes": 54971,
+      "sha256": "ac2b82ea452b45cd304405d6ae028a2018f6be7a3be4129453a0ecdaace48b59",
+      "width": 800,
+      "height": 640,
+      "source": "production settings on an owned private Windows desktop"
+    }
+  ]
+}

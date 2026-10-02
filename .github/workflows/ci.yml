@@ -1,0 +1,68 @@
+# Copyright (c) 2026 Mansur
+# SPDX-License-Identifier: MIT
+name: Source checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: source-checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  docs-python:
+    name: Documentation and Python
+    runs-on: windows-2022
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Check public docs, assets and export scope
+        run: python scripts/check_public_docs.py
+      - name: Run isolated Python checks
+        run: python -m unittest discover -s tests -p "test_*.py"
+
+  native:
+    name: Native ${{ matrix.arch }}
+    runs-on: windows-2022
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [x64, Win32]
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Prepare pinned lexicon data
+        run: python scripts/prepare_lexicon.py --download
+      - name: Build and check native component
+        shell: powershell
+        run: ./scripts/build.ps1 -Architecture ${{ matrix.arch }}
+
+  desktop:
+    name: Desktop component
+    runs-on: windows-2022
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Build desktop and run isolated checks
+        shell: powershell
+        run: ./scripts/build_desktop.ps1

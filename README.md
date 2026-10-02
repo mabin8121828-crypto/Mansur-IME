@@ -1,80 +1,126 @@
-# Mansur
+<p align="center">
+  <img src="desktop/iconassets/product/brand.png" width="96" alt="Mansur 图标">
+</p>
 
-中文输入，也是一次英语学习机会。
+# Mansur 输入法
 
-Mansur是开发中的Windows输入法：正常输入中文或英文，快速三空格确认后显示英文
-并朗读；在英文浮窗中选词，可以显式查释义或慢速朗读。
+**让每一次输入，成为英语练习。**
 
-**公开署名：Mansur · 许可证：MIT · 当前阶段：Alpha**
+正常输入中文或英文，选好词后快速按三次空格：提交本句、显示英文并朗读。
+遇到不熟悉的英文，可以在浮窗内选词查释义、听慢读，或复制后自行使用。
 
-## 功能
+**Windows · Alpha 源码 · MIT · 作者：Mansur**
 
-- 独立开发的中文输入核心：全拼、简拼/混拼、可选模糊音、分页候选与个人短词记忆。
-- 轻按Shift切换中英，正常英文保留原文；学习后台故障不阻断基本输入。
-- 中文确认句翻译为英文，英文原文可朗读、拖选和复制；不自动向编辑器写回译文。
-- 现有英文浮窗内的选词释义、原文朗读和慢速学习，由用户明确触发。
-- 翻译与朗读分别选择本地或API，可配置厂家、模型、音色与各自加密密钥。
-- 统一浅/深色主题、可隐藏状态栏，个人词库导入导出。
+[快速开始](docs/QUICK_START.md) · [图文使用手册](docs/USER_GUIDE.md) ·
+[常见问题](docs/FAQ.md) · [English](README.en.md)
 
-国内翻译预设包含DeepSeek、千问、智谱GLM、Kimi、豆包、MiniMax、腾讯TokenHub、
-混元、百度千帆、阶跃星辰、讯飞星火，另有OpenRouter、OpenAI、硅基流动及自定义
-兼容入口。朗读可使用本地Kokoro或已实现的兼容接口，包括阶跃星辰。语言模型入口
-不表示同厂的所有原生语音协议均已实现。见[厂家配置](docs/DOMESTIC_PROVIDERS.md)。
+## 为什么做这个输入法
 
-## 使用方式
+聊天、记事和日常打字，本来就在表达自己的想法。Mansur 把这些已经熟悉的
+内容变成英文表达，让你知道“这句话用英语怎么说”，然后听一遍、跟读一遍。
+练习来自你刚刚说的话，容易理解，也容易记住。
 
-使用本输入法选好中文词，或输入英文后，快速按三次空格，确认提交并学习。
-Enter可只提交而不朗读。复制译文后由用户自行粘贴，不自动发送消息。
-
-API密钥与模型由使用者自行准备。项目许可证允许商用，API调用仍可能收费，
-模型及第三方运行库的分发许可也应独立核对。
-
-## 本地模型下载
-
-选择本地翻译可使用 Qwen GGUF 与 llama.cpp，选择本地朗读可使用 Kokoro。
-详见[本地模型下载与配置](docs/LOCAL_MODELS.md)：包含固定下载链接、文件校验、
-Python 兼容版本和设置步骤。两项服务可以混合使用本地与 API；只下载自己
-需要的组件。模型权重在上游下载，不加入源码仓库。
-
-## 构建与开发
-
-先阅读[从源码构建](docs/BUILDING.md)。主要构建入口：
-
-```powershell
-python scripts/prepare_lexicon.py --download
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1 -Architecture x64
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build_desktop.ps1
-python -m unittest discover -s tests -p test_*.py
+```mermaid
+flowchart LR
+    A[输入自己的话] --> B[选好词后快速三空格]
+    B --> C[看英文表达]
+    C --> D[听朗读并跟读]
+    C --> E[选词查释义或慢读]
 ```
 
-需要Windows、Visual Studio 2022 C++/MSBuild工具、Windows SDK、.NET Framework 4.8
-和Python。源码不附带个人API凭证、模型权重或旧输入法运行环境。
+## 项目海报
 
-目录：`core`/`include`为输入核心，`windows`为标准TSF集成，`desktop`为设置、
-英文浮窗和音频播放，`learning`为隔离学习进程，`installer`为安装流程。
-历史内部文件名、协议和安装路径仍保留MansurNext以兼容现有配置；产品公开名称为Mansur。
+<p align="center">
+  <a href="docs/media/mansur-poster.png"><img src="docs/media/mansur-poster.png" width="600" alt="Mansur 输入法：让每一次输入成为英语练习，展示三空格翻译、英文朗读和选词学习"></a>
+</p>
 
-## 当前验证范围
+[查看海报原图](docs/media/mansur-poster.png)。这张海报为项目宣传示意；具体操作
+以当前使用手册为准。当前公开交付是 Alpha 源码，尚无独立电脑验收后的安装包。
 
-local.32已在开发者本机安装并核验，桌面427项、Python97项检查通过，私有Windows
-桌面的自有窗口亦有可见性/焦点检查。此为实验版基础，不等于任意Windows版本、
-任意应用或全部厂家真实账号验收。干净电脑的完整安装、更新、卸载和数据保留
-验证仍需完成；没有对应厂商密钥的预设不能宣称已经真实调用成功。
+## 三步体验
 
-本项目不收集用户整句历史；学习请求只在明确确认后使用所选服务。
-详见[隐私说明](docs/PRIVACY.md)与[贡献说明](CONTRIBUTING.md)。
+### 1. 正常打字、选择候选
 
-## 许可与作者署名
+![中文候选](docs/media/candidate.png)
 
-Copyright (c) 2026 Mansur。Mansur是项目所有者使用的公开笔名。
+使用全拼或简拼输入，空格选首项、数字选词；候选支持翻页。
+轻按 Shift 可以切换英文模式，保留 `Hello`、`mansur` 等原文。
 
-项目自有代码按[MIT许可证](LICENSE)开放，允许商业使用、修改、二次分发和收费销售。
-分发副本或实质部分时，必须保留上述版权署名和完整MIT许可与免责声明；二进制
-分发也应携带许可文本。MIT不强制所有修改公开，也不强制在每个界面或广告署名。
+### 2. 快速三空格，听自己的英文表达
 
-第三方词库、图标与模型保留各自权利及条件，见[第三方说明](THIRD_PARTY_NOTICES.md)
-和[版权范围](COPYRIGHT.md)。建议分发页注明“基于Mansur项目，由Mansur发起”，
-这属于推荐描述，不是额外的许可限制。
+![英文浮窗](docs/media/english-popup.png)
 
-[源码导出与发布准备](docs/OPEN_SOURCE.md)说明如何生成经过允许清单和完整性检查
-的公开源码目录；本地导出不执行GitHub上传。
+选好词后再快速按三次空格，确认并学习。中文翻译为英文；英文保留原文并朗读。
+浮窗中的英文可以拖选、复制，也可以重播。
+
+### 3. 选中不熟悉的词，查释义、慢读
+
+![选词学习](docs/media/word-learning.png)
+
+在本产品的英文浮窗内选词或短语，主动点击查询或朗读。
+查询结合当前句子；“慢读”帮助你听清所选内容。释义是模型参考结果。
+
+以上界面使用生产控件和固定演示内容，其中部分通过离屏渲染生成，
+不代表真实 API 请求录像。图片来源及许可见[素材说明](docs/media/README.md)。
+
+## 已有功能
+
+| 功能 | 说明 |
+| --- | --- |
+| 中文输入 | 自主开发的输入核心；全拼、简拼/混拼、可选模糊音、九项候选与翻页 |
+| 中英切换 | 轻按 Shift；英文原文、大小写正常保留 |
+| 英语学习 | 快速三空格确认本句，中文翻译、英文显示和朗读 |
+| 选词学习 | 在已有英文浮窗内显式查释义、朗读或慢读所选内容 |
+| 复制与重播 | 复制整句或选中内容；重播已有句子 |
+| 个人词库 | 已确认短词的使用记忆；支持导入、导出与关闭自动记词 |
+| 外观 | 浅色、深色、跟随系统；横向/纵向候选；字体大小；可隐藏状态栏 |
+| 模型与 API | 翻译、朗读分别配置本地或 API；按服务加密保存密钥 |
+
+翻译预设包括 DeepSeek、千问、智谱 GLM、Kimi、豆包、MiniMax、腾讯 TokenHub、
+混元、百度千帆、阶跃星辰、讯飞星火，以及 OpenRouter、OpenAI、硅基流动和
+自定义兼容入口。朗读支持本地 Kokoro 及已实现的兼容接口，包括阶跃星辰。
+语言模型入口不表示同厂所有原生语音协议均已实现。见[厂家配置](docs/DOMESTIC_PROVIDERS.md)。
+
+## 从哪里开始
+
+**目前仓库提供源码。GitHub 的 Download ZIP 下载的是源码，不是安装包。**
+
+| 你的情况 | 入口 |
+| --- | --- |
+| 首次了解或已有试用安装 | [快速开始](docs/QUICK_START.md) |
+| 想了解全部操作 | [图文使用手册](docs/USER_GUIDE.md) |
+| 想配置本地模型 | [模型下载链接、版本与校验值](docs/LOCAL_MODELS.md) |
+| 想使用自己的 API | [厂家配置](docs/DOMESTIC_PROVIDERS.md) |
+| 想从源码运行 | [构建说明](docs/BUILDING.md) |
+| 遇到问题 | [FAQ](docs/FAQ.md)、[已知限制](docs/KNOWN_ISSUES.md)、[提交问题](https://github.com/mabin8121828-crypto/Mansur-IME/issues/new/choose) |
+| 想参与开发 | [贡献说明](CONTRIBUTING.md)、[版本记录](CHANGELOG.md) |
+
+独立电脑的安装、更新、卸载验收完成后，安装包将在
+[Releases](https://github.com/mabin8121828-crypto/Mansur-IME/releases) 提供。
+目标环境为 Windows 10/11 x64，同时构建面向 32 位应用的输入组件。
+macOS、Linux、Windows ARM64 尚未完成实现或验收。
+
+## 验证与当前边界
+
+现有本地基线完成了 427 项桌面组件检查和 97 项 Python 检查。
+仓库自动检查覆盖文档链接、素材校验、Python 检查、双架构原生构建和桌面组件构建。
+这些检查不安装输入法、不调用真实账户、不下载大模型，也不等同于所有电脑、
+应用和厂商的真实验收。详情见[已知限制与验证范围](docs/KNOWN_ISSUES.md)。
+
+目前没有网页划词、麦克风评分或生词本；英文译文由用户复制、粘贴，
+不自动写回编辑器或发送消息。
+
+## 隐私与许可
+
+- 只处理本输入法持有并确认的本句，不读取宿主全文或剪贴板历史。
+- 个人短词记忆保存在本机，可关闭；不会作为上下文自动上传。
+- API 模式会将明确确认的内容发送到你选择的服务，可能产生调用费用。
+- 源码不附带开发者密钥、个人配置、模型权重或 Python 环境。
+
+完整说明见[隐私说明](docs/PRIVACY.md)。
+
+项目自有代码采用 [MIT](LICENSE)，允许商业使用、修改与再分发；
+再分发时保留 `Copyright (c) 2026 Mansur` 及许可文本。
+第三方词库、图标、模型和运行库分别遵守原有许可，见
+[第三方说明](THIRD_PARTY_NOTICES.md)及[版权说明](COPYRIGHT.md)。
+内部历史文件名中的 `MansurNext` 用于兼容已有注册与安装路径，公开品牌为 Mansur。

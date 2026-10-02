@@ -1,0 +1,64 @@
+# Copyright (c) 2026 Mansur
+# SPDX-License-Identifier: MIT
+name: 问题反馈
+description: 用固定样例报告输入、英文浮窗、声音或安装问题。
+title: "[问题] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先阅读 [FAQ](https://github.com/mabin8121828-crypto/Mansur-IME/blob/main/docs/FAQ.md) 和已知限制。
+        请勿提交 API 密钥、个人配置、完整输入记录或词库。截图请遮住私密内容。
+  - type: input
+    id: version
+    attributes:
+      label: 输入法版本或源码提交
+      placeholder: 例如 local.32 或提交编号
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Windows 与应用版本
+      description: 窗口问题请补充显示缩放、多屏情况；不需要账户或电脑用户名。
+      placeholder: Windows 11 x64；应用和版本；缩放 125%
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题类型
+      options:
+        - 中文或英文输入
+        - 英文浮窗或选词学习
+        - 翻译或 API 配置
+        - 声音或本地模型
+        - 安装、更新或卸载
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: service
+    attributes:
+      label: 相关服务与模型（如适用）
+      description: 翻译和朗读分别写本地或 API、服务名称、模型 ID。绝不要填写密钥。
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: 固定复现步骤
+      description: 使用你好、Hello 等固定样例，不填写私人聊天正文。
+      placeholder: |
+        1. 打开……
+        2. 输入……并选择……
+        3. 快速按三次空格……
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 预期结果与实际结果
+      description: 可以添加已遮住秘密的截图，或不含正文、凭证的错误码。
+    validations:
+      required: true

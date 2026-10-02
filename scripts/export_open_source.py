@@ -11,9 +11,17 @@ import re
 import zipfile
 
 ROOT_FILES = ("LICENSE", "COPYRIGHT.md", "NOTICE", "THIRD_PARTY_NOTICES.md",
-              "README.md", "CONTRIBUTING.md", ".gitignore", ".gitattributes", "CMakeLists.txt")
+              "README.md", "README.en.md", "CHANGELOG.md", "CONTRIBUTING.md",
+              ".gitignore", ".gitattributes", "CMakeLists.txt")
 PUBLIC_DOCS = ("BUILDING.md", "PRIVACY.md", "OPEN_SOURCE.md", "DOMESTIC_PROVIDERS.md",
-               "LOCAL_MODELS.md", "local-model-downloads.json", "lexicon-example.tsv")
+               "LOCAL_MODELS.md", "local-model-downloads.json", "lexicon-example.tsv",
+               "QUICK_START.md", "USER_GUIDE.md", "FAQ.md", "KNOWN_ISSUES.md",
+               "media/README.md", "media/ASSETS.json", "media/mansur-poster.png",
+               "media/candidate.png", "media/english-popup.png", "media/word-learning.png",
+               "media/settings-appearance.png", "media/models-translation.png", "media/models-speech.png")
+PUBLIC_GITHUB_FILES = (".github/ISSUE_TEMPLATE/bug_report.yml",
+                       ".github/ISSUE_TEMPLATE/feature_request.yml",
+                       ".github/ISSUE_TEMPLATE/config.yml", ".github/workflows/ci.yml")
 CODE_DIRS = ("core", "include", "windows", "desktop", "learning", "installer", "tools", "scripts", "tests")
 CODE_SUFFIXES = {".cpp", ".hpp", ".cs", ".py", ".ps1", ".def", ".manifest", ".config"}
 SECRET_PATTERNS = (
@@ -25,6 +33,7 @@ FORBIDDEN_PARTS = {".git", "__pycache__", ".venv", "venv", "models", "runtime", 
 def source_files(root: Path) -> list[Path]:
     files = {root / name for name in ROOT_FILES}
     files.update(root / "docs" / name for name in PUBLIC_DOCS)
+    files.update(root / name for name in PUBLIC_GITHUB_FILES)
     for directory in CODE_DIRS:
         for file in (root / directory).rglob("*"):
             if any(part in FORBIDDEN_PARTS for part in file.relative_to(root).parts):

@@ -1,0 +1,10 @@
+# Copyright (c) 2026 Mansur
+# SPDX-License-Identifier: MIT
+blank_issues_enabled: false
+contact_links:
+  - name: 常见问题
+    url: https://github.com/mabin8121828-crypto/Mansur-IME/blob/main/docs/FAQ.md
+    about: 输入、英文、声音、模型配置与更新说明。
+  - name: 当前限制与验证范围
+    url: https://github.com/mabin8121828-crypto/Mansur-IME/blob/main/docs/KNOWN_ISSUES.md
+    about: 查看 Alpha 范围和独立电脑的验收标准。

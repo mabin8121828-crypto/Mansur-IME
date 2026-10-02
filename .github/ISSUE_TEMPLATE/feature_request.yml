@@ -1,0 +1,23 @@
+# Copyright (c) 2026 Mansur
+# SPDX-License-Identifier: MIT
+name: 功能建议
+description: 说明使用场景、遇到的困难和希望的行为。
+title: "[建议] "
+body:
+  - type: markdown
+    attributes:
+      value: 请先查看现有功能和已知限制。建议请使用普通示例，不附个人数据或凭证。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 使用场景与困难
+      placeholder: 我在……时，希望……，目前……
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 希望的行为
+      description: 可补充简单流程、替代方案或参考链接。
+    validations:
+      required: true
