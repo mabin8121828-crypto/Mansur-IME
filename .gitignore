@@ -1,0 +1,30 @@
+build/
+data/generated/
+data/downloads/
+models/
+runtime/
+out/
+dist/
+*.user
+*.pdb
+output/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.vs/
+.idea/
+.env
+.env.*
+!.env.example
+*.key
+*.key.dpapi
+*.pem
+local-models.json
+runtime-status.json
+research/
+windows/BUILD_CHECKS.json
+# Local development history contains machine-specific diagnostics.
+# The source export explicitly includes only public-facing documents.
+docs/*DELIVERY.md
+docs/STATUS.md

@@ -1,0 +1,3 @@
+Source: image supplied by Mansur in this conversation, 2026-10-01.
+Use: requested Mansur product icon. Original image preserved; Windows ICO size conversion only.
+Source SHA256: 903E5A28CD2B68E29DD95A745006B6630BF7C9AC283393F86011B243610C62B2

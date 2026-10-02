@@ -1,0 +1,4 @@
+LIBRARY mansur_next_tsf
+EXPORTS
+    DllGetClassObject PRIVATE
+    DllCanUnloadNow PRIVATE

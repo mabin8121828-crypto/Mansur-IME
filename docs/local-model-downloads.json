@@ -1,0 +1,72 @@
+{
+  "project": "Mansur",
+  "baseline_date": "2026-10-02",
+  "scope": "Optional external downloads for Windows x64; not included in source export",
+  "files": [
+    {
+      "component": "local_translation_model",
+      "file": "Qwen3-4B-Instruct-2507-Q5_K_M.gguf",
+      "bytes": 2889514080,
+      "sha256": "5bde5e9d883622acb02bf77fe7dcbc56a8b9a9ad4be78a72ca23a532658b4ecb",
+      "hash_basis": "Hugging Face file metadata; matches current local file",
+      "url": "https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/resolve/a06e946bb6b655725eafa393f4a9745d460374c9/Qwen3-4B-Instruct-2507-Q5_K_M.gguf",
+      "publisher": "Unsloth GGUF conversion of Qwen model",
+      "revision": "a06e946bb6b655725eafa393f4a9745d460374c9",
+      "base_model": "Qwen/Qwen3-4B-Instruct-2507",
+      "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "license": "Apache-2.0",
+      "source_page": "https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/tree/a06e946bb6b655725eafa393f4a9745d460374c9",
+      "license_source": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "component": "local_translation_runtime",
+      "file": "llama-b11146-bin-win-vulkan-x64.zip",
+      "bytes": 32127004,
+      "sha256": "55a378aa095b466979d85075234f66d7655c7a7483222af0c006c0e55b4d7bd6",
+      "hash_basis": "GitHub release asset digest",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11146/llama-b11146-bin-win-vulkan-x64.zip",
+      "version": "b11146",
+      "license": "MIT for llama.cpp; retain separate bundled component notices",
+      "source_page": "https://github.com/ggml-org/llama.cpp/releases/tag/b11146",
+      "install_note": "Extract the full archive; keep all DLLs and license files; select llama-server.exe"
+    },
+    {
+      "component": "local_speech_model",
+      "file": "kokoro-v1.0.onnx",
+      "bytes": 325532387,
+      "sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+      "hash_basis": "Current local file verified by SHA256; upstream asset digest unavailable",
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
+      "version": "model-files-v1.0",
+      "license": "Apache-2.0 model; ONNX conversion code licensed separately",
+      "source_page": "https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.0",
+      "license_source": "https://huggingface.co/hexgrad/Kokoro-82M",
+      "install_note": "Keep exact file name in the same folder as voices-v1.0.bin"
+    },
+    {
+      "component": "local_speech_voices",
+      "file": "voices-v1.0.bin",
+      "bytes": 28214398,
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "hash_basis": "Current local file verified by SHA256; upstream asset digest unavailable",
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
+      "version": "model-files-v1.0",
+      "license": "Apache-2.0 model assets; runtime dependencies licensed separately",
+      "source_page": "https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.0",
+      "license_source": "https://huggingface.co/hexgrad/Kokoro-82M",
+      "install_note": "Keep exact file name in the same folder as kokoro-v1.0.onnx"
+    }
+  ],
+  "speech_python_baseline": {
+    "python_family": "3.12 x64",
+    "known_developer_runtime": "3.12.9",
+    "package": "kokoro-onnx",
+    "package_version": "0.6.1",
+    "requires_python": ">=3.10,<3.14",
+    "package_source": "https://pypi.org/project/kokoro-onnx/0.6.1/",
+    "python_source": "https://www.python.org/downloads/windows/",
+    "indirect_dependencies_locked": false,
+    "clean_machine_install_verified": false
+  },
+  "license_note": "Mansur MIT applies only to original project material. External models and runtime dependencies keep their own licenses, including GPL dependencies in the phonemizer/eSpeak NG speech chain."
+}

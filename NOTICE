@@ -1,0 +1,13 @@
+Mansur
+Copyright (c) 2026 Mansur
+
+Original project code and documentation are licensed under the MIT License.
+The complete project license is in LICENSE.
+
+This project uses separately licensed AOSP and jieba dictionary data, Lucide
+toolbar icons and LobeHub service icons. Their owners and complete license
+locations are listed in THIRD_PARTY_NOTICES.md. Keep the relevant upstream
+licenses when redistributing those materials or artifacts containing them.
+
+Model weights and model runtimes are not included in the public source export.
+The source license does not change their licenses or API service terms.

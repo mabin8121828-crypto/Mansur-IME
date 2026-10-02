@@ -1,0 +1,142 @@
+{
+  "package": "@lobehub/icons-static-png",
+  "version": "1.97.1",
+  "tarball": "https://registry.npmjs.org/@lobehub/icons-static-png/-/icons-static-png-1.97.1.tgz",
+  "integrity": "sha512-ZeK0Pf2wKlpOyEjHeAkjnCW4WViqpUC6CKbjTQJuuqymRT5n4pBiRFBr8/l79y0Y9fhWSFO3y5qOm2LG55LKGg==",
+  "license_blob": "1dd53d2a9d99e5f91113831a850276ef530cb9d2",
+  "source": "https://github.com/lobehub/lobe-icons",
+  "files": [
+    {
+      "name": "baidu-dark.png",
+      "archive_path": "package/dark/baidu-color.png",
+      "sha256": "614BFB32F798A8AC6EDD63A3F956FA6F65D209B0523A626E7F8BCC2EA45865D4"
+    },
+    {
+      "name": "baidu-light.png",
+      "archive_path": "package/light/baidu-color.png",
+      "sha256": "614BFB32F798A8AC6EDD63A3F956FA6F65D209B0523A626E7F8BCC2EA45865D4"
+    },
+    {
+      "name": "deepseek-dark.png",
+      "sha256": "F98596FD7802CA0C5290C498FEC578FA823988646332EE36C43B7920DC4936EB"
+    },
+    {
+      "name": "deepseek-light.png",
+      "sha256": "F98596FD7802CA0C5290C498FEC578FA823988646332EE36C43B7920DC4936EB"
+    },
+    {
+      "name": "doubao-dark.png",
+      "archive_path": "package/dark/doubao-color.png",
+      "sha256": "E2A9ADE3D125E2965ED06BB1910223B8723A2A9402AD608EB49F540272209847"
+    },
+    {
+      "name": "doubao-light.png",
+      "archive_path": "package/light/doubao-color.png",
+      "sha256": "E2A9ADE3D125E2965ED06BB1910223B8723A2A9402AD608EB49F540272209847"
+    },
+    {
+      "name": "hunyuan-dark.png",
+      "archive_path": "package/dark/hunyuan-color.png",
+      "sha256": "0F2F9AF09B698F4CFA3158D43B29E90A5F30297B09401C49133C9F195899556D"
+    },
+    {
+      "name": "hunyuan-light.png",
+      "archive_path": "package/light/hunyuan-color.png",
+      "sha256": "0F2F9AF09B698F4CFA3158D43B29E90A5F30297B09401C49133C9F195899556D"
+    },
+    {
+      "name": "kimi-dark.png",
+      "archive_path": "package/dark/kimi-color.png",
+      "sha256": "FB460178C19CD28FC953FB446EB200B4050F4046EAE3D84D1A15189EB50F717C"
+    },
+    {
+      "name": "kimi-light.png",
+      "archive_path": "package/light/kimi-color.png",
+      "sha256": "FB460178C19CD28FC953FB446EB200B4050F4046EAE3D84D1A15189EB50F717C"
+    },
+    {
+      "name": "minimax-dark.png",
+      "archive_path": "package/dark/minimax-color.png",
+      "sha256": "9E596627348DEB4030938A948243CC94E96CC1548D645CE4FAF1DE0E51B9043A"
+    },
+    {
+      "name": "minimax-light.png",
+      "archive_path": "package/light/minimax-color.png",
+      "sha256": "9E596627348DEB4030938A948243CC94E96CC1548D645CE4FAF1DE0E51B9043A"
+    },
+    {
+      "name": "openai-dark.png",
+      "sha256": "375016542EBE78B63C7F36B8F6AEE3058F2B706D861E5153FD74F9C27F63B8B7"
+    },
+    {
+      "name": "openai-light.png",
+      "sha256": "8A33312F6BB17C1EDDDF8F9D7FBAC09CE1D1D697D6601F37227AFA879E94C52E"
+    },
+    {
+      "name": "openrouter-dark.png",
+      "sha256": "DE7C51476F81C54F0CAA5F872D94BBF4F670084363DAC70572A87FC60625B096"
+    },
+    {
+      "name": "openrouter-light.png",
+      "sha256": "8BAEA3B5B20C253DC52C7D2B98B3FB6616190D845D02A500D85304E3B87C3ADC"
+    },
+    {
+      "name": "qwen-dark.png",
+      "archive_path": "package/dark/qwen-color.png",
+      "sha256": "DE9BC7E285164E0D284A7B9555511C7F7767AF7699D6272B3B67B376EEDDBFB3"
+    },
+    {
+      "name": "qwen-light.png",
+      "archive_path": "package/light/qwen-color.png",
+      "sha256": "DE9BC7E285164E0D284A7B9555511C7F7767AF7699D6272B3B67B376EEDDBFB3"
+    },
+    {
+      "name": "siliconcloud-dark.png",
+      "sha256": "9685F75EDF9BF83F7F7B6CBA20DD97B8F6A108945957D38D6FDDFDAD2B07F2CF"
+    },
+    {
+      "name": "siliconcloud-light.png",
+      "sha256": "9685F75EDF9BF83F7F7B6CBA20DD97B8F6A108945957D38D6FDDFDAD2B07F2CF"
+    },
+    {
+      "name": "spark-dark.png",
+      "archive_path": "package/dark/spark-color.png",
+      "sha256": "5D11EC9D03AEE234B8F074214DC2CDB1FC364FC75A2D6B32EA68916FE09BDA5A"
+    },
+    {
+      "name": "spark-light.png",
+      "archive_path": "package/light/spark-color.png",
+      "sha256": "5D11EC9D03AEE234B8F074214DC2CDB1FC364FC75A2D6B32EA68916FE09BDA5A"
+    },
+    {
+      "name": "stepfun-dark.png",
+      "archive_path": "package/dark/stepfun-color.png",
+      "sha256": "49E54BCDA77C23F9A8CEACC0D3C1C07DA09BE4C2534D453EBCAD7DA201B25B96"
+    },
+    {
+      "name": "stepfun-light.png",
+      "archive_path": "package/light/stepfun-color.png",
+      "sha256": "49E54BCDA77C23F9A8CEACC0D3C1C07DA09BE4C2534D453EBCAD7DA201B25B96"
+    },
+    {
+      "name": "tencentcloud-dark.png",
+      "archive_path": "package/dark/tencentcloud-color.png",
+      "sha256": "D576DD0D74F58EFA8D0326B9E2B70D990D1D6AE9683BBDD1BECDEBA0A62DCB67"
+    },
+    {
+      "name": "tencentcloud-light.png",
+      "archive_path": "package/light/tencentcloud-color.png",
+      "sha256": "D576DD0D74F58EFA8D0326B9E2B70D990D1D6AE9683BBDD1BECDEBA0A62DCB67"
+    },
+    {
+      "name": "zhipu-dark.png",
+      "archive_path": "package/dark/zhipu-color.png",
+      "sha256": "612DCA42BBA94FD6E760EEA79BB34EE8F40F23E24944E58075D6A9FF43B6801A"
+    },
+    {
+      "name": "zhipu-light.png",
+      "archive_path": "package/light/zhipu-color.png",
+      "sha256": "612DCA42BBA94FD6E760EEA79BB34EE8F40F23E24944E58075D6A9FF43B6801A"
+    }
+  ]
+}
